@@ -2,13 +2,8 @@ import streamlit as st
 import pandas as pd
 from typing import Dict, List
 import time
+from student_evaluator_v3 import StudentAnswerEvaluator
 
-# Import our evaluation system
-try:
-    from student_evaluator_v3 import StudentAnswerEvaluator
-except ImportError:
-    st.error("Please make sure 'student_evaluator.py' is in the same directory!")
-    st.stop()
 
 # Page configuration
 st.set_page_config(
@@ -327,4 +322,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
